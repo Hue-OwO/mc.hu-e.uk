@@ -1,0 +1,31 @@
+.skinButtons {
+  grid-area: overlay;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  align-items: flex-end;      
+  padding: 7px;
+  gap: 7px;
+  margin: 0 0 0 auto;
+
+}
+.skinButton {
+  background: var(--secondary-bg-lighter);
+  padding: 3px 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10;
+  border: var(--border-dark)
+}
+
+.raw {
+    overflow: hidden;
+    height: 100%;
+    background: var(--primary-bg-darker);
+    border: var(--border-dark);
+    border-radius: 10px;
+}
+.rawMargin {
+    overflow: scroll;
+    max-height: 100%;
+}

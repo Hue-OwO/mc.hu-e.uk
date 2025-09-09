@@ -1,0 +1,88 @@
+.profile {
+   display: flex;
+   height: auto;
+   margin-top: 20px;
+   
+}
+.user {
+  height: auto;
+  width: 890px;
+  margin: 0 auto;
+  padding: 15px;
+  background: var(--secondary-bg);
+  overflow: hidden;
+  display: flex;
+}
+.side {
+  margin-left: 10px;
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.userMargin {
+  border-radius: 8px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  overflow: hidden;
+  width: fit-content;
+  height: 256px;
+  width: 256px;
+  border: var(--border-dark)
+}
+
+.skin {
+  grid-area: overlay;
+  background: var(--primary-bg-dark);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+.skin canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  object-fit: cover;
+
+}
+.username {
+  grid-area: overlay;
+  position: relative;
+  align-self: start;
+  justify-self: stretch;
+  padding: 8px;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  z-index: 1;
+  background: #140e2e96;
+}
+
+.username::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  backdrop-filter: blur(8px);
+  z-index: -1;
+}
+
+
+ @media only screen and (max-width: 768px) {
+    .profile {
+        width: 100%;
+        height: auto;
+    }
+    .user {
+        width: 100%;
+        margin: 0 auto
+    }
+    .userMargin {
+        margin: 10px auto;
+    }
+ }
